@@ -1,2 +1,3 @@
+permalink: "/:path/:basename"
 baseprefix: "go.webscale.info"
 githubbaseurl: "https://github.com/saml"
