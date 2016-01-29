@@ -5,6 +5,7 @@
 {% capture githuburl %}{{ site.githubbaseurl }}/{{ page.path | remove:'/index.html' }}{% endcapture %}
 <meta name="go-import" content="{{ importname }} git {{ githuburl }}">
 <meta name="go-source" content="{{ importname }} _   {{ githuburl }}/tree/master{/dir} {{ githuburl }}/blob/master{/dir}/{file}#L{line}">
+{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
 <p>
   <code><strong>import</strong>&nbsp;"{{ importname }}"</code>
 </p>
@@ -12,6 +13,3 @@
   <marquee scrollamount="1" direction="up">Source: <a href="{{ githuburl }}">{{ githuburl }}</a></marquee>
   <marquee scrollamount="1" direction="down" >API Documentation: <a href="https://godoc.org/{{ importname }}">https://godoc.org/{{ importname }}</a></marquee>
 </p>
-<div id="content">
-{{ content }}
-</div>
