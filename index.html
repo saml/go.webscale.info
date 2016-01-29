@@ -1,0 +1,12 @@
+---
+layout: page
+title: Go Projects
+---
+<p>
+{% for pg in site.pages %}
+  {% if pg.path != 'index.html' %}
+    {% capture project_name %}{{ pg.path | remove:'/index.html' }}{% endcapture %}
+    <a href="{{ pg.url }}">{{ project_name }}</a>{% if pg.title %} - {{ pg.title }}{% endif %}<br>
+  {% endif %}
+{% endfor %}
+</p>
