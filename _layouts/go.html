@@ -1,8 +1,8 @@
 <!doctype html>
 <meta charset="utf-8">
 <title>{% if page.title %}{{ page.title }}{% else %}{{ page.url }}{% endif %}</title>
-{% capture importname %}{{ site.baseprefix }}{{ page.url }}{% endcapture %}
-{% capture githuburl %}{{ site.githubbaseurl }}{{ page.url }}{% endcapture %}
+{% capture importname %}{{ site.baseprefix }}/{{ page.path | remove:'/index.html' }}{% endcapture %}
+{% capture githuburl %}{{ site.githubbaseurl }}/{{ page.path | remove:'/index.html' }}{% endcapture %}
 <meta name="go-import" content="{{ importname }} git {{ githuburl }}">
 <meta name="go-source" content="{{ importname }} _   {{ githuburl }}/tree/master{/dir} {{ githuburl }}/blob/master{/dir}/{file}#L{line}">
 <p>
