@@ -6,8 +6,13 @@
 <meta name="go-import" content="{{ importname }} git {{ githuburl }}">
 <meta name="go-source" content="{{ importname }} _   {{ githuburl }}/tree/master{/dir} {{ githuburl }}/blob/master{/dir}/{file}#L{line}">
 <p>
-  Import: <code><strong>import</strong>&nbsp;"{{ importname }}"</code><br>
+  Import:<br>
+  <code><strong>import</strong>&nbsp;"{{ importname }}"</code><br>
+  <br>
+  <br>
   Source: <a href="{{ githuburl }}">{{ githuburl }}</a><br>
   API Documentation: <a href="https://godoc.org/{{ importname }}">https://godoc.org/{{ importname }}</a><br>
 </p>
+<div id="content">
 {{ content }}
+</div>
